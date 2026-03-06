@@ -15,7 +15,7 @@ The tool requires a `mapping.properties` file in the same directory. Use the for
 **Example Content:**
 ```properties
 # Format: SensitiveValue=UniqueToken
-Insuria=${ANON_PROJECT}
+Project-Alpha=${ANON_PROJECT}
 10.0.0.5=${ANON_IP_INTERNAL}
 Customer-DB=${ANON_DB_SYSTEM}
 John Doe=${ANON_USER_A}
@@ -40,7 +40,7 @@ Restores the original terms in the chatbot's answer.
 ## Best Practices
 
 * **Token Uniqueness**: Always use specific tokens like `${TOKEN_NAME}` to prevent accidental replacements of common words during the deanonymization phase (e.g., using "Project" might replace every instance of that word in the chatbot's generic advice).
-* **Case Sensitivity**: The replacement is case-sensitive. `Insuria` will not match `insuria`. Ensure your properties file reflects the casing used in your documents.
+* **Case Sensitivity**: The replacement is case-sensitive. `Alpha` will not match `alpha`. Ensure your properties file reflects the casing used in your documents.
 * **Safety**: Even with anonymization, avoid pasting highly sensitive credentials or production secrets into third-party LLMs.
 
 ## Technical Notes
